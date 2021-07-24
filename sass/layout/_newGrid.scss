@@ -1,0 +1,55 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  margin-bottom: $gutter-vertical;
+  display: grid;
+  grid-column-gap: $gutter-horizontal;
+  padding: 0 3rem;
+  justify-content: center;
+  grid-template-columns: 1fr;
+
+  [class^="col-"] {
+    margin-bottom: $gutter-vertical-sm;
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+.row-2 {
+  grid-template-columns: repeat(2, 1fr);
+
+  @include respond(tab-port) {
+    grid-template-columns: 70%;
+  }
+}
+
+.row-3 {
+  grid-template-columns: repeat(3, 1fr);
+
+  //   @include respond(tab-land) {
+  //     grid-template-columns: 40%;
+  //     justify-content: center;
+  //   }
+
+  @include respond(phone) {
+    grid-template-columns: 50%;
+  }
+}
+
+.row-4 {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 25%);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 30%);
+  }
+}

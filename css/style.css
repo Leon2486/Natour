@@ -34,7 +34,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -55,7 +56,6 @@ body {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /* font-size: 1.6rem; */
   color: #777;
   line-height: 1.7; }
 
@@ -112,8 +112,7 @@ body {
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  text-transform: uppercase; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -364,6 +363,11 @@ body {
       padding: 3rem;
       padding-left: 6rem;
       width: 80%; } }
+  @media (max-width: 27em) {
+    .story {
+      transform: skewX(0);
+      width: 100%;
+      padding: 3rem 2rem; } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -373,8 +377,15 @@ body {
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden; }
+    @media (max-width: 27em) {
+      .story__shape {
+        transform: skewX(0);
+        margin-right: 1rem; } }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 27em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -789,6 +800,9 @@ body {
   @media (max-width: 37.5em) {
     .row-3 {
       grid-template-columns: 50%; } }
+  @media (max-width: 27em) {
+    .row-3 {
+      grid-template-columns: 70%; } }
 
 .row-4 {
   grid-template-columns: repeat(4, 1fr); }
@@ -798,6 +812,9 @@ body {
   @media (max-width: 37.5em) {
     .row-4 {
       grid-template-columns: repeat(2, 30%); } }
+  @media (max-width: 27em) {
+    .row-4 {
+      grid-template-columns: 50%; } }
 
 .section-about {
   background-color: #f7f7f7;
@@ -808,7 +825,7 @@ body {
       padding: 20rem 0 45rem 0; } }
   @media (max-width: 37.5em) {
     .section-about {
-      padding: 20rem 0 35rem 0; } }
+      padding: 30rem 0 35rem 0; } }
 
 .section-feature {
   margin-top: -10rem;
@@ -853,6 +870,13 @@ body {
   @media (max-width: 37.5em) {
     .book {
       height: 55rem; } }
+  @media (max-width: 27em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 50%), url("../img/nat-10.jpg");
+      height: 60rem; } }
   .book__form {
     width: 60%;
     padding: 6rem; }
+    @media (max-width: 27em) {
+      .book__form {
+        width: 100%; } }

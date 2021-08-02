@@ -40,6 +40,9 @@
   @include respond(phone) {
     grid-template-columns: 50%;
   }
+  @include respond(small-phone) {
+    grid-template-columns: 70%;
+  }
 }
 
 .row-4 {
@@ -51,5 +54,8 @@
 
   @include respond(phone) {
     grid-template-columns: repeat(2, 30%);
+  }
+  @include respond(small-phone) {
+    grid-template-columns: 50%;
   }
 }

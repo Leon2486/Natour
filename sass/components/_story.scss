@@ -15,6 +15,12 @@
     width: 80%;
   }
 
+  @include respond(small-phone) {
+    transform: skewX(0);
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -24,10 +30,19 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @include respond(small-phone) {
+      transform: skewX(0);
+      margin-right: 1rem;
+    }
   }
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(small-phone) {
+      transform: skewX(0);
+    }
   }
 
   &__img {

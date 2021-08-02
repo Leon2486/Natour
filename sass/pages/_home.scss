@@ -8,7 +8,7 @@
   }
 
   @include respond(phone) {
-    padding: 20rem 0 35rem 0;
+    padding: 30rem 0 35rem 0;
   }
 }
 
@@ -82,8 +82,23 @@
     height: 55rem;
   }
 
+  @include respond(small-phone) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%,
+        transparent 50%
+      ),
+      url("../img/nat-10.jpg");
+    height: 60rem;
+  }
+
   &__form {
     width: 60%;
     padding: 6rem;
+
+    @include respond(small-phone) {
+      width: 100%;
+    }
   }
 }

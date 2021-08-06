@@ -37,8 +37,9 @@
   //     justify-content: center;
   //   }
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     grid-template-columns: 50%;
+    gap: 2rem;
   }
   @include respond(small-phone) {
     grid-template-columns: 70%;

@@ -76,11 +76,7 @@
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  height: 50rem;
-
-  @include respond(phone) {
-    height: 55rem;
-  }
+  height: 60rem;
 
   @include respond(small-phone) {
     background-image: linear-gradient(
@@ -90,7 +86,6 @@
         transparent 50%
       ),
       url("../img/nat-10.jpg");
-    height: 60rem;
   }
 
   &__form {
